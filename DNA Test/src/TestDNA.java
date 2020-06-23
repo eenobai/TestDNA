@@ -1,7 +1,9 @@
+import java.util.Scanner;
+
 class TestDNA {
 	
 	String textDNA;
-	
+	String protein;
 	
 	public TestDNA(String myDNA) {
 		textDNA = myDNA;
@@ -20,8 +22,15 @@ class TestDNA {
 	
 
   public static void main(String[] args) {
-	  TestDNA dna1 = new TestDNA("ATGCGATACGCTTGA");
+	  Scanner input = new Scanner(System.in);
+	  int i = 1;
+	  while(i == 1) {
+	  System.out.println("Enter your DNA pattern");
+	  
+	  
+	  TestDNA dna1 = new TestDNA(input.nextLine());
     System.out.println(dna1.proteinDetector());
+	  }
   }
 
 }
